@@ -1,6 +1,21 @@
 # Deploying on AWS Lightsail
 https://www.youtube.com/watch?v=iohBEVf4uIQ
 
+## delete existing
+`SSH into the lightsail box` and then run the following commands:
+
+```
+pm2 stop --all
+
+rm -rf jsonbox
+
+git clone https://github.com/locusnine/jsonbox.git
+
+sudo chmod u+x ./*.sh
+
+sudo ./launch.sh
+```
+
 # jsonbox.io
 
 A HTTP based JSON storage. It lets you store, read & modify JSON data over HTTP APIs for FREE. Ideal for small projects, prototypes or hackathons, where you don't have to spin up your own data store.
